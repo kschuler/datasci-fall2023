@@ -320,7 +320,7 @@ choices <- c(
     answer="`data[1]`",
     answer="`data[[1]]`",
     "`data[[Student ID]]`",
-    answer="```data$`Student ID````"
+    answer="`` data$`Student ID` ``"
 )
 
 cat(longmcq(choices))
