@@ -1,0 +1,16 @@
+{
+  "hash": "0f870d4ea01adb0dd61f1105d3848cc4",
+  "result": {
+    "markdown": "---\ntitle:  \"Lab 3: Visualize and wrangle data\"\nsubtitle: \"Not graded, just practice\"\ndate:   2023-09-14\nauthor: Katie Schuler\n---\n\n::: {.cell}\n::: {.cell-output .cell-output-stderr}\n```\n-- Attaching core tidyverse packages ------------------------ tidyverse 2.0.0 --\nv dplyr     1.1.2     v readr     2.1.4\nv forcats   1.0.0     v stringr   1.5.0\nv ggplot2   3.4.3     v tibble    3.2.1\nv lubridate 1.9.2     v tidyr     1.3.0\nv purrr     1.0.2     \n-- Conflicts ------------------------------------------ tidyverse_conflicts() --\nx dplyr::filter() masks stats::filter()\nx dplyr::lag()    masks stats::lag()\ni Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors\n```\n:::\n:::\n",
+    "supporting": [
+      "lab-03_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": null,
+    "postProcess": false
+  }
+}

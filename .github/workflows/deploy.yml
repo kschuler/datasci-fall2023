@@ -1,0 +1,50 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+      - fall-2023
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install dependencies and build
+        run: |
+          npm install
+          npm run build
+
+      - name: Deploy to gh-pages
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          
+          if [ "${{ github.ref }}" == "refs/heads/main" ]; then
+            mkdir -p public/main
+            mv * public/main || true
+            mv public/main/.git public/main_git || true
+            git add -A
+            git commit -m "Deploy main branch to gh-pages"
+            git subtree push --prefix public/main origin gh-pages
+            mv public/main_git public/main/.git || true
+          fi
+
+          if [ "${{ github.ref }}" == "refs/heads/fall-2023" ]; then
+            mkdir -p public/fall-2023
+            mv * public/fall-2023 || true
+            mv public/fall-2023/.git public/fall-2023_git || true
+            git add -A
+            git commit -m "Deploy fall-2023 branch to gh-pages"
+            git subtree push --prefix public/fall-2023 origin gh-pages
+            mv public/fall-2023_git public/fall-2023/.git || true
+          fi

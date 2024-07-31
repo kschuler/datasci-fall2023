@@ -1,0 +1,9 @@
+{
+  "listingMap": {
+    "drafts.qmd": [
+      "notes/*.qmd",
+      "labs/*.qmd",
+      "psets/*.qmd"
+    ]
+  }
+}

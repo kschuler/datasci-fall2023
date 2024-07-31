@@ -1,0 +1,347 @@
+{
+  "index.qmd": {
+    "index.html": "e332cbf6",
+    "index.tex": "344e9262"
+  },
+  "about.qmd": {
+    "about.html": "7d6b7b0f"
+  },
+  "getting-started-with-r.md": {
+    "getting-started-with-r.html": "0274b871"
+  },
+  "rbasics.ipynb": {
+    "rbasics.html": "2ded2644",
+    "rbasics.tex": "ebda0270"
+  },
+  "schedule.qmd": {
+    "schedule.html": "0c9cd799"
+  },
+  "lectures.qmd": {
+    "lectures.html": "9dca446a",
+    "lectures.tex": "04d35466"
+  },
+  "syllabus.qmd": {
+    "syllabus.html": "60a00522",
+    "syllabus.tex": "48e6c86f"
+  },
+  "listing.qmd": {
+    "listing.html": "56895827",
+    "listing.tex": "7aad7b4f"
+  },
+  "fall2023/lectures/getting-started-with-r.md": {
+    "getting-started-with-r.html": "fd17706a"
+  },
+  "rubric.qmd": {
+    "rubric.html": "6e9dcb95",
+    "rubric.tex": "5122269c"
+  },
+  "fall2023/lectures/getting-started-with-r.qmd": {
+    "getting-started-with-r.html": "4fd1a16d"
+  },
+  "practice_qs/1-getting-started-with-r.qmd": {
+    "1-getting-started-with-r.html": "0ef6ed6d"
+  },
+  "lectures/1-getting-started-with-r.qmd": {
+    "1-getting-started-with-r.html": "7f250114"
+  },
+  "labs/1-getting-started-with-r-lab.qmd": {
+    "1-getting-started-with-r-lab.html": "b6b9b1a4",
+    "1-getting-started-with-r-lab.tex": "fac296e6"
+  },
+  "lecturenotes/2-getting-started-with-tidyverse.qmd": {
+    "2-getting-started-with-tidyverse.html": "2b2edd63",
+    "2-getting-started-with-tidyverse.tex": "a3dc9090"
+  },
+  "lecturenotes/1-getting-started-with-r.qmd": {
+    "1-getting-started-with-r.html": "0a123f77",
+    "1-getting-started-with-r.tex": "dd4a9001"
+  },
+  "labs/2-getting-started-with-tidyverse.qmd": {
+    "2-getting-started-with-tidyverse.html": "a85b6e87",
+    "2-getting-started-with-tidyverse.tex": "18236119"
+  },
+  "lecturenotes/3-data-visualization.qmd": {
+    "3-data-visualization.html": "124775d9",
+    "3-data-visualization.tex": "5a699602"
+  },
+  "lecturenotes/5-probability-distributions.qmd": {
+    "5-probability-distributions.html": "99527013",
+    "5-probability-distributions.tex": "71c3a63e"
+  },
+  "schedule-2.qmd": {
+    "schedule-2.html": "00bc849f"
+  },
+  "lecturenotes/r-basics.qmd": {
+    "r-basics.html": "8a5ebc12"
+  },
+  "lecturenotes/hello-world.qmd": {
+    "hello-world.html": "56b2bc5e"
+  },
+  "lecturenotes/probability-distributions.qmd": {
+    "probability-distributions.html": "4fe0ee89"
+  },
+  "lecturenotes/data-importing.qmd": {
+    "data-importing.html": "16d0d7ab"
+  },
+  "lecturenotes/data-visualization.qmd": {
+    "data-visualization.html": "d2c8e84c"
+  },
+  "labs.qmd": {
+    "labs.html": "ad3f57c8"
+  },
+  "lecturenotes/r/r-basics.qmd": {
+    "r-basics.html": "3391554f"
+  },
+  "lecturenotes/r/hello-world.qmd": {
+    "hello-world.html": "80c7507c"
+  },
+  "lecturenotes/r/data-importing.qmd": {
+    "data-importing.html": "10d717ad"
+  },
+  "labs/2-data-importing-and-viz.qmd": {
+    "2-data-importing-and-viz.html": "a584717f"
+  },
+  "lecturenotes/r/data-visualization.qmd": {
+    "data-visualization.html": "4a7ff9cd"
+  },
+  "labs/1-sols.qmd": {
+    "1-sols.html": "9f807db6"
+  },
+  "notes/hello-world.qmd": {
+    "hello-world.html": "548621c1",
+    "hello-world.tex": "403ea1b2"
+  },
+  "notes/probability-distributions.qmd": {
+    "probability-distributions.html": "9a231217",
+    "probability-distributions.tex": "5a79056a"
+  },
+  "notes/data-importing.qmd": {
+    "data-importing.html": "6b372c6d",
+    "data-importing.tex": "c283595b"
+  },
+  "notes/data-visualization.qmd": {
+    "data-visualization.html": "41e8045b",
+    "data-visualization.tex": "f0dc5004"
+  },
+  "notes/r-basics.qmd": {
+    "r-basics.html": "c55ee69c",
+    "r-basics.tex": "6e9c7ffa"
+  },
+  "wd.qmd": {
+    "wd.html": "b8aedd17"
+  },
+  "notes/sampling-variability.qmd": {
+    "sampling-variability.html": "91214e0f",
+    "sampling-variability.tex": "7bea91f3"
+  },
+  "notes/model-accuracy.qmd": {
+    "model-accuracy.html": "ab4b9fd9",
+    "model-accuracy.tex": "e87ca218"
+  },
+  "notes/model-fitting.qmd": {
+    "model-fitting.html": "4622056a",
+    "model-fitting.tex": "e4745792"
+  },
+  "notes/model-building.qmd": {
+    "model-building.html": "c636db1e"
+  },
+  "notes/data-tidying.qmd": {
+    "data-tidying.html": "6dcb803f"
+  },
+  "notes/data-transformation.qmd": {
+    "data-transformation.html": "965ec0e6"
+  },
+  "notes/hypothesis-testing.qmd": {
+    "hypothesis-testing.html": "4292c6d0",
+    "hypothesis-testing.tex": "2b913e38"
+  },
+  "notes/model-reliability.qmd": {
+    "model-reliability.html": "4291283a",
+    "model-reliability.tex": "96b92932"
+  },
+  "notes/model-specification.qmd": {
+    "model-specification.html": "19420f64",
+    "model-specification.tex": "51157798"
+  },
+  "notes/index.qmd": {
+    "index.html": "fa4402bb"
+  },
+  "slides/demo.qmd": {
+    "demo.html": "0bdba8cd"
+  },
+  "psets/problem-set-1.qmd": {
+    "problem-set-1.html": "0c5ac68e"
+  },
+  "drafts.qmd": {
+    "drafts.html": "5f9a003f",
+    "drafts.tex": "5423e5c3"
+  },
+  "notes/mixed-effects-models.qmd": {
+    "mixed-effects-models.html": "e75f4fb1",
+    "mixed-effects-models.tex": "65949843"
+  },
+  "notes/feature-engineering.qmd": {
+    "feature-engineering.html": "8b7e9956",
+    "feature-engineering.tex": "a90a68a8"
+  },
+  "notes/data-wrangling.qmd": {
+    "data-wrangling.html": "6a4c6b1b",
+    "data-wrangling.tex": "53ebb8bf"
+  },
+  "notes/classification.qmd": {
+    "classification.html": "fb64a645",
+    "classification.tex": "35d0da6f"
+  },
+  "notes/inference.qmd": {
+    "inference.html": "1e8f3667",
+    "inference.tex": "f3ef84d4"
+  },
+  "slides/hello-world.qmd": {
+    "hello-world.html": "38b3382b"
+  },
+  "webexercises.qmd": {
+    "webexercises.html": "5e1ffef5",
+    "webexercises.tex": "c44ff6f4"
+  },
+  "labs/lab-02.qmd": {
+    "lab-02.html": "e1f67e81",
+    "lab-02.tex": "f77f4c94"
+  },
+  "labs/lab-01.qmd": {
+    "lab-01.html": "9f57a5ec",
+    "lab-01.tex": "c8f4e451"
+  },
+  "slides/r-basics.qmd": {
+    "r-basics.html": "e03cc7e4"
+  },
+  "psets/problem-set-01.qmd": {
+    "problem-set-01.html": "dcaacd28",
+    "problem-set-01.tex": "793b338c"
+  },
+  "psets/problem-set-02.qmd": {
+    "problem-set-02.html": "fd00a75e",
+    "problem-set-02.tex": "d056accf"
+  },
+  "slides/data-importing.qmd": {
+    "data-importing.html": "fc3c34f4"
+  },
+  "playground.qmd": {
+    "playground.html": "ce2efa43",
+    "playground.tex": "3e277bdb"
+  },
+  "slides/data-visualization.qmd": {
+    "data-visualization.html": "b717bb92"
+  },
+  "notes/data-visualization-layers.qmd": {
+    "data-visualization-layers.html": "f14a1eb6"
+  },
+  "notes/data-visualization-basics.qmd": {
+    "data-visualization-basics.html": "b844da4b"
+  },
+  "notes/data-visualization-2.qmd": {
+    "data-visualization-2.html": "2ffb6b62"
+  },
+  "notes/data-visualization-1.qmd": {
+    "data-visualization-1.html": "21c1edfa"
+  },
+  "notes/data-visualization-delete.qmd": {
+    "data-visualization-delete.html": "1b5a3e7b",
+    "data-visualization-delete.tex": "88f2b74a"
+  },
+  "slides/data-wrangling.qmd": {
+    "data-wrangling.html": "f7c4cf11"
+  },
+  "labs/lab-03.qmd": {
+    "lab-03.html": "12d04391",
+    "lab-03.tex": "66598f32"
+  },
+  "slides/probability-distributions.qmd": {
+    "probability-distributions.html": "a905d5a7"
+  },
+  "quizzes/quiz-study-guide.qmd": {
+    "quiz-study-guide.html": "26aa3eb8"
+  },
+  "quizzes/quiz-01.qmd": {
+    "quiz-01.html": "8ff5e30b",
+    "quiz-01.tex": "87cde0d7"
+  },
+  "labs/lab-04.qmd": {
+    "lab-04.html": "77ce7ecb"
+  },
+  "quizzes/quiz-01-solutions.qmd": {
+    "quiz-01-solutions.html": "2849c4cd",
+    "quiz-01-solutions.tex": "a03ee3ad"
+  },
+  "slides/sampling-distribution.qmd": {
+    "sampling-distribution.html": "4345ce23"
+  },
+  "notes/sampling-distribution.qmd": {
+    "sampling-distribution.html": "6248e1d1"
+  },
+  "slides/hypothesis-testing.qmd": {
+    "hypothesis-testing.html": "f2a5b62d"
+  },
+  "slides/model-specification.qmd": {
+    "model-specification.html": "2e354b87"
+  },
+  "labs/lab-06.qmd": {
+    "lab-06.html": "a7fb6413"
+  },
+  "quizzes/quiz-02.qmd": {
+    "quiz-02.html": "a51d076c",
+    "quiz-02.tex": "0bbf0761"
+  },
+  "quizzes/quiz-02-solutions.qmd": {
+    "quiz-02-solutions.html": "0ccb6d79",
+    "quiz-02-solutions.tex": "228760f5"
+  },
+  "slides/model-fitting.qmd": {
+    "model-fitting.html": "515af3b2"
+  },
+  "psets/problem-set-03.qmd": {
+    "problem-set-03.html": "a00964ee",
+    "problem-set-03.tex": "9fa915d5"
+  },
+  "slides/model-fitting-R.qmd": {
+    "model-fitting-R.html": "ced9ea21"
+  },
+  "labs/lab-07.qmd": {
+    "lab-07.html": "77c24df0"
+  },
+  "slides/model-accuracy.qmd": {
+    "model-accuracy.html": "5ecc1546"
+  },
+  "labs/lab-051.qmd": {
+    "lab-051.html": "9c4d36d9"
+  },
+  "quizzes/quiz-03.qmd": {
+    "quiz-03.html": "f5eeafa5",
+    "quiz-03.tex": "74018d73"
+  },
+  "slides/model-reliability.qmd": {
+    "model-reliability.html": "6c83e657"
+  },
+  "quizzes/quiz-03-solutions.qmd": {
+    "quiz-03-solutions.html": "f660a349",
+    "quiz-03-solutions.tex": "d98459ff"
+  },
+  "psets/problem-set-04.qmd": {
+    "problem-set-04.html": "6965a430",
+    "problem-set-04.tex": "5813a1e3"
+  },
+  "labs/lab-08.qmd": {
+    "lab-08.html": "febb8c1e"
+  },
+  "quizzes/quiz-04.qmd": {
+    "quiz-04.html": "1419c63d",
+    "quiz-04.tex": "fb925577"
+  },
+  "psets/problem-set-05.qmd": {
+    "problem-set-05.html": "d389f61d",
+    "problem-set-05.tex": "75d28e74"
+  },
+  "psets/problem-set-06.qmd": {
+    "problem-set-06.html": "70c8a477",
+    "problem-set-06.tex": "93e2bc94"
+  }
+}
