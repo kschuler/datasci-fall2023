@@ -1,9 +1,0 @@
----
-title: "Inference"
-date: 11/18/2023
-author: 
-    - Katie Schuler
----
-
-::: {.callout-warning title="Under Construction"}
-:::
