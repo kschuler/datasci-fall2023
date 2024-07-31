@@ -1,1 +1,0 @@
-Sitemap: https://kschuler.github.io/datasci/sitemap.xml
