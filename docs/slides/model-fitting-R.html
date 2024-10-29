@@ -8,11 +8,11 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.353">
+  <meta name="generator" content="quarto-1.5.56">
 
   <meta name="author" content="Katie Schuler">
   <meta name="dcterms.date" content="2023-10-17">
-  <title>LING 0700 | PSYC 2314 - Model Fitting with R (demo)</title>
+  <title>LING 0700 | PSYC 2314 – Model Fitting with R (demo)</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -32,7 +32,7 @@
     }
     /* CSS for syntax highlighting */
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span { line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -43,7 +43,7 @@
     }
     @media print {
     pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
     }
     pre.numberSource code
       { counter-reset: source-line 0; }
@@ -222,7 +222,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -388,7 +389,6 @@
   <script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
   <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
   <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
-  
   <script src="../site_libs/kePrint-0.0.1/kePrint.js"></script>
   <link href="../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 </head>
@@ -446,8 +446,7 @@ Katie Schuler
 <li>Mixed-effect models</li>
 </ul>
 </div>
-</div>
-</div>
+</div></div>
 </section>
 <section id="roadmap" class="slide level2 smaller">
 <h2>Roadmap</h2>
@@ -468,10 +467,14 @@ Katie Schuler
 <div class="column" style="width:60%;">
 <div class="cell">
 <div class="cell-output-display">
+<div>
+<figure>
 <p><img data-src="model-fitting-R_files/figure-revealjs/unnamed-chunk-2-1.png" width="960"></p>
+</figure>
 </div>
 </div>
-<table>
+</div>
+<table class="caption-top">
 <thead>
 <tr class="header">
 <th></th>
@@ -494,21 +497,22 @@ Katie Schuler
 </tbody>
 </table>
 </div><div class="column" style="width:40%;">
-<div class="cell" data-reveal="true">
+<div class="cell" data-reveal="true" data-layout-align="default">
 <div class="cell-output-display">
 <div>
+<p></p><figure class=""><p></p>
 <div>
 <pre class="mermaid mermaid-js">flowchart TD
     spec(Model specification) --&gt; fit(Estimate free parameters) 
     fit(Estimate free parameters) --&gt; fitted(Fitted model) 
 </pre>
 </div>
+<p></p></figure><p></p>
 </div>
 </div>
 </div>
 <p><span class="math inline">\(y = 211.271 + -1.695x\)</span></p>
-</div>
-</div>
+</div></div>
 </section>
 <section id="fit-a-model-in-r" class="slide level2 smaller">
 <h2>Fit a model in R</h2>
@@ -516,10 +520,14 @@ Katie Schuler
 <div class="column" style="width:60%;">
 <div class="cell">
 <div class="cell-output-display">
+<div>
+<figure>
 <p><img data-src="model-fitting-R_files/figure-revealjs/unnamed-chunk-4-1.png" width="960"></p>
+</figure>
 </div>
 </div>
-<table>
+</div>
+<table class="caption-top">
 <thead>
 <tr class="header">
 <th></th>
@@ -544,7 +552,7 @@ Katie Schuler
 </div><div class="column" style="width:40%;">
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">lm</span>(rt <span class="sc">~</span> experience, <span class="at">data =</span> data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">lm</span>(rt <span class="sc">~</span> experience, <span class="at">data =</span> data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
@@ -558,9 +566,9 @@ Coefficients:
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>data <span class="sc">%&gt;%</span> </span>
-<span id="cb3-2"><a href="#cb3-2"></a>    <span class="fu">specify</span>(rt <span class="sc">~</span> experience) <span class="sc">%&gt;%</span></span>
-<span id="cb3-3"><a href="#cb3-3"></a>    <span class="fu">fit</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>data <span class="sc">%&gt;%</span> </span>
+<span id="cb3-2"><a></a>    <span class="fu">specify</span>(rt <span class="sc">~</span> experience) <span class="sc">%&gt;%</span></span>
+<span id="cb3-3"><a></a>    <span class="fu">fit</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 2
   term       estimate
@@ -572,9 +580,9 @@ Coefficients:
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">linear_reg</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a>    <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb5-3"><a href="#cb5-3"></a>    <span class="fu">fit</span>(rt <span class="sc">~</span> experience, <span class="at">data =</span> data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">linear_reg</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb5-2"><a></a>    <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb5-3"><a></a>    <span class="fu">fit</span>(rt <span class="sc">~</span> experience, <span class="at">data =</span> data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>parsnip model object
 
@@ -588,19 +596,20 @@ Coefficients:
 </div>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 </section>
 <section id="goodness-of-fit" class="slide level2 smaller">
 <h2>Goodness of fit</h2>
 <p>Quantifying our intution with sum of squared error</p>
-<div class="cell quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="cell-output-display quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div>
+
+</div>
+<div class="cell quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img data-src="model-fitting-R_files/figure-revealjs/unnamed-chunk-8-1.png" width="960"></p>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<table class="table" data-quarto-postprocess="true" style="font-size: 16px; margin-left: auto; margin-right: auto;">
+<table class="table caption-top" data-quarto-postprocess="true" style="font-size: 16px; margin-left: auto; margin-right: auto;">
 <thead>
 <tr class="header">
 <th style="text-align: right;" data-quarto-table-cell-role="th">experience</th>
@@ -648,13 +657,8 @@ Coefficients:
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 
 
-</div>
 </div>
 </div>
 <div class="fragment">
@@ -666,7 +670,7 @@ Coefficients:
 <p>Given some data:</p>
 <div class="cell">
 <div class="cell-output-display">
-<table class="table" data-quarto-postprocess="true" style="font-size: 18px; margin-left: auto; margin-right: auto;">
+<table class="table caption-top" data-quarto-postprocess="true" style="font-size: 18px; margin-left: auto; margin-right: auto;">
 <thead>
 <tr class="header">
 <th style="text-align: right;" data-quarto-table-cell-role="th">experience</th>
@@ -722,11 +726,11 @@ Coefficients:
 <p><span class="math inline">\(SSE=\sum_{i=i}^{n} (d_{i} - m_{i})^2 = 205.139\)</span></p>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>  data <span class="sc">%&gt;%</span></span>
-<span id="cb7-2"><a href="#cb7-2"></a>    <span class="fu">mutate</span>(<span class="at">prediction =</span> <span class="fl">211.271</span> <span class="sc">+</span> <span class="sc">-</span><span class="fl">1.695</span> <span class="sc">*</span> experience) <span class="sc">%&gt;%</span></span>
-<span id="cb7-3"><a href="#cb7-3"></a>    <span class="fu">mutate</span>(<span class="at">error =</span> prediction <span class="sc">-</span> rt) <span class="sc">%&gt;%</span></span>
-<span id="cb7-4"><a href="#cb7-4"></a>    <span class="fu">mutate</span>(<span class="at">squared_error =</span> error<span class="sc">^</span><span class="dv">2</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb7-5"><a href="#cb7-5"></a>    <span class="fu">with</span>(<span class="fu">sum</span>(squared_error))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>  data <span class="sc">%&gt;%</span></span>
+<span id="cb7-2"><a></a>    <span class="fu">mutate</span>(<span class="at">prediction =</span> <span class="fl">211.271</span> <span class="sc">+</span> <span class="sc">-</span><span class="fl">1.695</span> <span class="sc">*</span> experience) <span class="sc">%&gt;%</span></span>
+<span id="cb7-3"><a></a>    <span class="fu">mutate</span>(<span class="at">error =</span> prediction <span class="sc">-</span> rt) <span class="sc">%&gt;%</span></span>
+<span id="cb7-4"><a></a>    <span class="fu">mutate</span>(<span class="at">squared_error =</span> error<span class="sc">^</span><span class="dv">2</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb7-5"><a></a>    <span class="fu">with</span>(<span class="fu">sum</span>(squared_error))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 205.139</code></pre>
 </div>
@@ -742,15 +746,15 @@ Coefficients:
 <h2>Gradient descent</h2>
 <p>Define our cost function:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>SSE <span class="ot">&lt;-</span> <span class="cf">function</span>(data, par) {</span>
-<span id="cb9-2"><a href="#cb9-2"></a>  data <span class="sc">%&gt;%</span></span>
-<span id="cb9-3"><a href="#cb9-3"></a>    <span class="fu">mutate</span>(<span class="at">prediction =</span> par[<span class="dv">1</span>] <span class="sc">+</span> par[<span class="dv">2</span>]<span class="sc">*</span> experience) <span class="sc">%&gt;%</span></span>
-<span id="cb9-4"><a href="#cb9-4"></a>    <span class="fu">mutate</span>(<span class="at">error =</span> prediction <span class="sc">-</span> rt) <span class="sc">%&gt;%</span></span>
-<span id="cb9-5"><a href="#cb9-5"></a>    <span class="fu">mutate</span>(<span class="at">squared_error =</span> error<span class="sc">^</span><span class="dv">2</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb9-6"><a href="#cb9-6"></a>    <span class="fu">with</span>(<span class="fu">sum</span>(squared_error))</span>
-<span id="cb9-7"><a href="#cb9-7"></a>}</span>
-<span id="cb9-8"><a href="#cb9-8"></a></span>
-<span id="cb9-9"><a href="#cb9-9"></a><span class="fu">SSE</span>(<span class="at">data =</span> data, <span class="at">par =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>SSE <span class="ot">&lt;-</span> <span class="cf">function</span>(data, par) {</span>
+<span id="cb9-2"><a></a>  data <span class="sc">%&gt;%</span></span>
+<span id="cb9-3"><a></a>    <span class="fu">mutate</span>(<span class="at">prediction =</span> par[<span class="dv">1</span>] <span class="sc">+</span> par[<span class="dv">2</span>]<span class="sc">*</span> experience) <span class="sc">%&gt;%</span></span>
+<span id="cb9-4"><a></a>    <span class="fu">mutate</span>(<span class="at">error =</span> prediction <span class="sc">-</span> rt) <span class="sc">%&gt;%</span></span>
+<span id="cb9-5"><a></a>    <span class="fu">mutate</span>(<span class="at">squared_error =</span> error<span class="sc">^</span><span class="dv">2</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb9-6"><a></a>    <span class="fu">with</span>(<span class="fu">sum</span>(squared_error))</span>
+<span id="cb9-7"><a></a>}</span>
+<span id="cb9-8"><a></a></span>
+<span id="cb9-9"><a></a><span class="fu">SSE</span>(<span class="at">data =</span> data, <span class="at">par =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 31791</code></pre>
 </div>
@@ -758,11 +762,11 @@ Coefficients:
 <div class="fragment">
 <p>Impliment gradient descent algorithm with <code>optimg</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">optimg</span>(</span>
-<span id="cb11-2"><a href="#cb11-2"></a>    <span class="at">data =</span> data,  <span class="co"># our data</span></span>
-<span id="cb11-3"><a href="#cb11-3"></a>    <span class="at">par =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>), <span class="co"># our parameters</span></span>
-<span id="cb11-4"><a href="#cb11-4"></a>    <span class="at">fn =</span> SSE,     <span class="co"># our cost function</span></span>
-<span id="cb11-5"><a href="#cb11-5"></a>    <span class="at">method =</span> <span class="st">"STGD"</span>) <span class="co"># our iterative optimization algorithm </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">optimg</span>(</span>
+<span id="cb11-2"><a></a>    <span class="at">data =</span> data,  <span class="co"># our data</span></span>
+<span id="cb11-3"><a></a>    <span class="at">par =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>), <span class="co"># our parameters</span></span>
+<span id="cb11-4"><a></a>    <span class="at">fn =</span> SSE,     <span class="co"># our cost function</span></span>
+<span id="cb11-5"><a></a>    <span class="at">method =</span> <span class="st">"STGD"</span>) <span class="co"># our iterative optimization algorithm </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$par
 [1] 211.26155  -1.69473
@@ -824,18 +828,17 @@ w_1\\
 <section id="ordinary-least-squares-solution-in-r" class="slide level2 smaller">
 <h2>Ordinary least squares solution in R</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a> ols_matrix_way <span class="ot">&lt;-</span> <span class="cf">function</span>(X, Y){</span>
-<span id="cb13-2"><a href="#cb13-2"></a>  <span class="fu">solve</span>(<span class="fu">t</span>(X) <span class="sc">%*%</span> X) <span class="sc">%*%</span> <span class="fu">t</span>(X) <span class="sc">%*%</span> Y</span>
-<span id="cb13-3"><a href="#cb13-3"></a> }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a> ols_matrix_way <span class="ot">&lt;-</span> <span class="cf">function</span>(X, Y){</span>
+<span id="cb13-2"><a></a>  <span class="fu">solve</span>(<span class="fu">t</span>(X) <span class="sc">%*%</span> X) <span class="sc">%*%</span> <span class="fu">t</span>(X) <span class="sc">%*%</span> Y</span>
+<span id="cb13-3"><a></a> }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <p>We need to construct X and Y (must be matrices):</p>
-<div>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>(response_matrix <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span> <span class="fu">select</span>(rt) <span class="sc">%&gt;%</span> <span class="fu">as.matrix</span>())</span>
-<span id="cb14-2"><a href="#cb14-2"></a>(explanatory_matrix <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">int =</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span> <span class="fu">select</span>(int, experience) <span class="sc">%&gt;%</span> <span class="fu">as.matrix</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="cell-output cell-output-stdout quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>(response_matrix <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span> <span class="fu">select</span>(rt) <span class="sc">%&gt;%</span> <span class="fu">as.matrix</span>())</span>
+<span id="cb14-2"><a></a>(explanatory_matrix <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">int =</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span> <span class="fu">select</span>(int, experience) <span class="sc">%&gt;%</span> <span class="fu">as.matrix</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="cell-output cell-output-stdout quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <pre><code>      rt
 [1,] 124
 [2,]  95
@@ -843,7 +846,7 @@ w_1\\
 [4,]  45
 [5,]  18</code></pre>
 </div>
-<div class="cell-output cell-output-stdout quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="cell-output cell-output-stdout quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <pre><code>     int experience
 [1,]   1         49
 [2,]   1         69
@@ -854,11 +857,10 @@ w_1\\
 </div>
 </div>
 </div>
-</div>
 <div class="fragment">
 <p>Then we can use our function to generate the OLS solution:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="fu">ols_matrix_way</span>(explanatory_matrix, response_matrix)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">ols_matrix_way</span>(explanatory_matrix, response_matrix)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>                   rt
 int        211.270690
@@ -866,7 +868,7 @@ experience  -1.694828</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">lm</span>(rt <span class="sc">~</span> experience, <span class="at">data =</span> data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">lm</span>(rt <span class="sc">~</span> experience, <span class="at">data =</span> data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
@@ -904,6 +906,7 @@ Coefficients:
 ::: {.column width="67%"}
 
 
+
 ::: {.cell}
 
 :::
@@ -922,6 +925,7 @@ ggplot(data, aes(x = x, y = y)) +
 :::
 
 
+
 :::
 
 
@@ -934,6 +938,7 @@ How would you draw a "best fit" line?
 
 
 
+
 ::: {.cell}
 ::: {.cell-output-display}
 ![](model-fitting-R_files/figure-revealjs/unnamed-chunk-19-1.png){width=960}
@@ -941,9 +946,11 @@ How would you draw a "best fit" line?
 :::
 
 
+
 ## Fitting by intuition {.smaller}
 
 Which line fits best?  How can you tell? 
+
 
 
 ::: {.cell layout-nrow="3" layout-ncol="2"}
@@ -958,9 +965,11 @@ Which line fits best?  How can you tell?
 
 
 
+
 ## Quantifying "goodness" of fit  {.smaller}
 
 We can measure how close the model is to the data
+
 
 
 ::: {.cell}
@@ -978,11 +987,13 @@ We can measure how close the model is to the data
 :::
 
 
+
 . . . 
 
 `residuals`
 
 ## {.smaller} 
+
 
 
 ::: {.cell layout-nrow="2" layout-ncol="2"}
@@ -998,7 +1009,7 @@ We can measure how close the model is to the data
 
 `````{=html}
 
-<table data-quarto-postprocess="true">
+<table class="caption-top" data-quarto-postprocess="true">
 <thead>
 <tr class="header">
 <th style="text-align: right;" data-quarto-table-cell-role="th">x</th>
@@ -1046,8 +1057,17 @@ We can measure how close the model is to the data
 </tr>
 </tbody>
 </table>
-````` ::: ::: {.cell-output-display} `````{=html}
-<table data-quarto-postprocess="true">
+
+
+`````
+
+:::
+
+::: {.cell-output-display}
+
+`````{=html}
+
+<table class="caption-top" data-quarto-postprocess="true">
 <thead>
 <tr class="header">
 <th style="text-align: right;" data-quarto-table-cell-role="th">x</th>
@@ -1101,6 +1121,7 @@ We can measure how close the model is to the data
 
 :::
 :::
+
 
 
 ## But there are infinite possibilities
@@ -1167,6 +1188,7 @@ $2.5 = a2 + b$
 ::: {.column width="50%"}
 
 
+
 ::: {.cell}
 
 ```{.r .cell-code}
@@ -1174,6 +1196,7 @@ lm(y ~ 1 + x, data)
 ```
 
 ::: {.cell-output .cell-output-stdout}
+
 ```
 
 Call:
@@ -1183,6 +1206,8 @@ Coefficients:
 (Intercept)            x  
         0.6          0.7  
 ```
+
+
 :::
 :::
 
@@ -1195,6 +1220,7 @@ data %>%
 ```
 
 ::: {.cell-output .cell-output-stdout}
+
 ```
 # A tibble: 2 × 2
   term      estimate
@@ -1202,8 +1228,11 @@ data %>%
 1 intercept    0.600
 2 x            0.7  
 ```
+
+
 :::
 :::
+
 
 
 :::
@@ -1224,8 +1253,10 @@ data %>%
 
  -->
 
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 <p><a href="https://kathrynschuler.com/datasci/">https://kathrynschuler.com/datasci</a></p>
+</div>
 </div>
 </div>
 </section>
@@ -1255,7 +1286,6 @@ data %>%
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -1510,18 +1540,7 @@ data %>%
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -1553,11 +1572,50 @@ data %>%
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
-      function tippyHover(el, contentFn) {
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -1567,8 +1625,17 @@ data %>%
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 
@@ -1582,7 +1649,11 @@ data %>%
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {

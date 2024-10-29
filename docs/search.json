@@ -159,5 +159,187 @@
     "title": "Model specification",
     "section": "Transformation",
     "text": "Transformation\n\n\n\n\nhttps://kathrynschuler.com/datasci"
+  },
+  {
+    "objectID": "slides/model-fitting.html#you-are-here",
+    "href": "slides/model-fitting.html#you-are-here",
+    "title": "Model Fitting",
+    "section": "You are here",
+    "text": "You are here\n\n\nData science with R\n\n\nHello, world!\nR basics\nData importing\nData visualization\nData wrangling\n\n\n\nStats & Model buidling\n\n\nSampling distribution\nHypothesis testing\nModel specification\nModel fitting\nModel accuracy\nModel reliability\n\n\n\nMore advanced\n\n\nClassification\nFeature engineering (preprocessing)\nInference for regression\nMixed-effect models"
+  },
+  {
+    "objectID": "slides/model-fitting.html#model-building-overview",
+    "href": "slides/model-fitting.html#model-building-overview",
+    "title": "Model Fitting",
+    "section": "Model building overview",
+    "text": "Model building overview\n\nModel specification: what is the form?\nModel fitting: you have the form, how do you guess the free parameters?\nModel accuracy: you’ve estimated the parameters, how well does that model describe your data?\nModel reliability: when you estimate the parameters, there is some uncertainty on them"
+  },
+  {
+    "objectID": "slides/model-fitting.html#section",
+    "href": "slides/model-fitting.html#section",
+    "title": "Model Fitting",
+    "section": "",
+    "text": "Types of models\n\n\nSpecification\n\nResponse, \\(y\\)\nExplanatory, \\(x_n\\)\nFunctional form, \\(y=\\beta_0 + \\beta_1x_1 + \\epsilon\\)\nModel terms\n\nIntercept\nMain\nInteraction\nTransformation"
+  },
+  {
+    "objectID": "slides/model-fitting.html#linear-model-functional-form",
+    "href": "slides/model-fitting.html#linear-model-functional-form",
+    "title": "Model Fitting",
+    "section": "Linear model functional form",
+    "text": "Linear model functional form\n\n\n\nfield\nlinear model eq\n\n\n\n\nh.s. algebra\n\\(y=ax+b\\)\n\n\nmachine learning\n\\(y = w_0 + w_1x_1 + w_2x_2 + ... + w_nx_n\\)\n\n\nstatistics\n\\(y = β_0 + β_1x_1 + β_2x_2 + ... + β_nx_n + ε\\)\n\n\nmatrix\n\\(y = Xβ + ε\\)"
+  },
+  {
+    "objectID": "slides/model-fitting.html#model-fitting-1",
+    "href": "slides/model-fitting.html#model-fitting-1",
+    "title": "Model Fitting",
+    "section": "Model fitting",
+    "text": "Model fitting\n\n\n\n\n\nflowchart TD\n    spec(Model specification) --&gt; fit(Estimate free parameters) \n    fit(Estimate free parameters) --&gt; fitted(Fitted model)"
+  },
+  {
+    "objectID": "slides/model-fitting.html#fitting-a-linear-model",
+    "href": "slides/model-fitting.html#fitting-a-linear-model",
+    "title": "Model Fitting",
+    "section": "Fitting a linear model",
+    "text": "Fitting a linear model\n\n\n\n\n\n\n\nflowchart TD\n    spec(Model specification \\n y = ax + b) --&gt; fit(Estimate free parameters) \n    fit(Estimate free parameters) --&gt; fitted(Fitted model \\n y = 0.7x + 0.6) \n\n\n\n\n\n\n\n\nggplot(data, aes(x = x, y = y)) +\n    geom_point(size = 4, color = \"darkred\") +\n    geom_smooth(method = \"lm\", formula = 'y ~ x', se = FALSE)"
+  },
+  {
+    "objectID": "slides/model-fitting.html#fitting-by-intuition",
+    "href": "slides/model-fitting.html#fitting-by-intuition",
+    "title": "Model Fitting",
+    "section": "Fitting by intuition",
+    "text": "Fitting by intuition\nHow would you draw a “best fit” line?"
+  },
+  {
+    "objectID": "slides/model-fitting.html#fitting-by-intuition-1",
+    "href": "slides/model-fitting.html#fitting-by-intuition-1",
+    "title": "Model Fitting",
+    "section": "Fitting by intuition",
+    "text": "Fitting by intuition\nWhich line fits best? How can you tell?"
+  },
+  {
+    "objectID": "slides/model-fitting.html#quantifying-goodness-of-fit",
+    "href": "slides/model-fitting.html#quantifying-goodness-of-fit",
+    "title": "Model Fitting",
+    "section": "Quantifying “goodness” of fit",
+    "text": "Quantifying “goodness” of fit\nWe can measure how close the model is to the data\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nresiduals"
+  },
+  {
+    "objectID": "slides/model-fitting.html#ssesum_iin-d_i---m_i2",
+    "href": "slides/model-fitting.html#ssesum_iin-d_i---m_i2",
+    "title": "Model Fitting",
+    "section": "\\(SSE=\\sum_{i=i}^{n} (d_{i} - m_{i})^2\\)",
+    "text": "\\(SSE=\\sum_{i=i}^{n} (d_{i} - m_{i})^2\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nx\ny\npred\nerr\nsq_err\n\n\n\n\n1\n1.2\n1.3\n-0.1\n0.01\n\n\n2\n2.5\n2.0\n0.5\n0.25\n\n\n3\n2.3\n2.7\n-0.4\n0.16\n\n\n4\n3.1\n3.4\n-0.3\n0.09\n\n\n5\n4.4\n4.1\n0.3\n0.09\n\n\n\n\n\n\n\n\nx\ny\npred\nerr\nsq_err\n\n\n\n\n1\n1.2\n1.58\n-0.38\n0.1444\n\n\n2\n2.5\n2.62\n-0.12\n0.0144\n\n\n3\n2.3\n3.66\n-1.36\n1.8496\n\n\n4\n3.1\n4.70\n-1.60\n2.5600\n\n\n5\n4.4\n5.74\n-1.34\n1.7956"
+  },
+  {
+    "objectID": "slides/model-fitting.html#but-there-are-infinite-possibilities",
+    "href": "slides/model-fitting.html#but-there-are-infinite-possibilities",
+    "title": "Model Fitting",
+    "section": "But there are infinite possibilities",
+    "text": "But there are infinite possibilities\nWe can’t test all Inf of the possible free parameters\n\\(y=b_0+b_1x_1\\)\n\n\nFree parameters to test\n\n\nLevel = SSE"
+  },
+  {
+    "objectID": "slides/model-fitting.html#error-surface",
+    "href": "slides/model-fitting.html#error-surface",
+    "title": "Model Fitting",
+    "section": "Error surface",
+    "text": "Error surface"
+  },
+  {
+    "objectID": "slides/model-fitting.html#gradient-descent-intuition",
+    "href": "slides/model-fitting.html#gradient-descent-intuition",
+    "title": "Model Fitting",
+    "section": "Gradient descent, intuition",
+    "text": "Gradient descent, intuition"
+  },
+  {
+    "objectID": "slides/model-fitting.html#gradient-descent",
+    "href": "slides/model-fitting.html#gradient-descent",
+    "title": "Model Fitting",
+    "section": "Gradient descent",
+    "text": "Gradient descent"
+  },
+  {
+    "objectID": "slides/model-fitting.html#gradient-descent-linear-model",
+    "href": "slides/model-fitting.html#gradient-descent-linear-model",
+    "title": "Model Fitting",
+    "section": "Gradient descent linear model",
+    "text": "Gradient descent linear model\n\nLinear models are convex functions: one minimum"
+  },
+  {
+    "objectID": "slides/model-fitting.html#ordinary-least-squares",
+    "href": "slides/model-fitting.html#ordinary-least-squares",
+    "title": "Model Fitting",
+    "section": "Ordinary least squares",
+    "text": "Ordinary least squares\nLinear models have a solution: we can solve for the values with linear algebra.\n\n\n\\(y = ax + b\\)\n\\(1.2 = a1 + b\\)\n\\(2.5 = a2 + b\\)\n\n\nlm(y ~ 1 + x, data)\n\n\nCall:\nlm(formula = y ~ 1 + x, data = data)\n\nCoefficients:\n(Intercept)            x  \n        0.6          0.7  \n\n\n\ndata %&gt;%\n    specify(y ~ 1 + x) %&gt;%\n    fit()\n\n# A tibble: 2 × 2\n  term      estimate\n  &lt;chr&gt;        &lt;dbl&gt;\n1 intercept    0.600\n2 x            0.7  \n\n\n\nordinary least squares\n\n\n\nhttps://kathrynschuler.com/datasci"
+  },
+  {
+    "objectID": "slides/model-fitting-R.html#you-are-here",
+    "href": "slides/model-fitting-R.html#you-are-here",
+    "title": "Model Fitting with R (demo)",
+    "section": "You are here",
+    "text": "You are here\n\n\nData science with R\n\n\nHello, world!\nR basics\nData importing\nData visualization\nData wrangling\n\n\n\nStats & Model buidling\n\n\nSampling distribution\nHypothesis testing\nModel specification\nModel fitting\nModel accuracy\nModel reliability\n\n\n\nMore advanced\n\n\nClassification\nFeature engineering (preprocessing)\nInference for regression\nMixed-effect models"
+  },
+  {
+    "objectID": "slides/model-fitting-R.html#roadmap",
+    "href": "slides/model-fitting-R.html#roadmap",
+    "title": "Model Fitting with R (demo)",
+    "section": "Roadmap",
+    "text": "Roadmap\n\nFit a model in R\nGoodness of fit: quantifying our intuition\nHow do we estimate the free parameters?\n\nGradient descent - iterative optimization algorithm\nOrdinary least squares - analytical solution for linear regression\n\nIf time: another full example"
+  },
+  {
+    "objectID": "slides/model-fitting-R.html#fit-a-model",
+    "href": "slides/model-fitting-R.html#fit-a-model",
+    "title": "Model Fitting with R (demo)",
+    "section": "Fit a model",
+    "text": "Fit a model\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmodel specification\n\n\n\n\nR syntax\nrt ~ 1 + experience\n\n\nR syntax\nrt ~ experience\n\n\nEquation\n\\(y=w_0+w_1x_1\\)\n\n\n\n\n\n\n\n\n\nflowchart TD\n    spec(Model specification) --&gt; fit(Estimate free parameters) \n    fit(Estimate free parameters) --&gt; fitted(Fitted model) \n\n\n\n\n\n\n\\(y = 211.271 + -1.695x\\)"
+  },
+  {
+    "objectID": "slides/model-fitting-R.html#fit-a-model-in-r",
+    "href": "slides/model-fitting-R.html#fit-a-model-in-r",
+    "title": "Model Fitting with R (demo)",
+    "section": "Fit a model in R",
+    "text": "Fit a model in R\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmodel specification\n\n\n\n\nR syntax\nrt ~ 1 + experience\n\n\nR syntax\nrt ~ experience\n\n\nEquation\n\\(y=w_0+w_1x_1\\)\n\n\n\n\n\n\nlm(rt ~ experience, data = data)\n\n\nCall:\nlm(formula = rt ~ experience, data = data)\n\nCoefficients:\n(Intercept)   experience  \n    211.271       -1.695  \n\n\n\n\n\ndata %&gt;% \n    specify(rt ~ experience) %&gt;%\n    fit()\n\n# A tibble: 2 × 2\n  term       estimate\n  &lt;chr&gt;         &lt;dbl&gt;\n1 intercept    211.  \n2 experience    -1.69\n\n\n\n\n\nlinear_reg() %&gt;%\n    set_engine(\"lm\") %&gt;%\n    fit(rt ~ experience, data = data)\n\nparsnip model object\n\n\nCall:\nstats::lm(formula = rt ~ experience, data = data)\n\nCoefficients:\n(Intercept)   experience  \n    211.271       -1.695"
+  },
+  {
+    "objectID": "slides/model-fitting-R.html#goodness-of-fit",
+    "href": "slides/model-fitting-R.html#goodness-of-fit",
+    "title": "Model Fitting with R (demo)",
+    "section": "Goodness of fit",
+    "text": "Goodness of fit\nQuantifying our intution with sum of squared error\n\n\n\n\n\n\n\n\n\n\n\nexperience\nrt\nprediction\nerror\nsquared_error\n\n\n\n\n49\n124\n128.216\n4.216\n17.774656\n\n\n69\n95\n94.316\n-0.684\n0.467856\n\n\n89\n71\n60.416\n-10.584\n112.021056\n\n\n99\n45\n43.466\n-1.534\n2.353156\n\n\n109\n18\n26.516\n8.516\n72.522256\n\n\n\n\n\n\n\n\n\\(SSE=\\sum_{i=i}^{n} (d_{i} - m_{i})^2 = 205.139\\)"
+  },
+  {
+    "objectID": "slides/model-fitting-R.html#sum-of-squared-error",
+    "href": "slides/model-fitting-R.html#sum-of-squared-error",
+    "title": "Model Fitting with R (demo)",
+    "section": "Sum of squared error",
+    "text": "Sum of squared error\nGiven some data:\n\n\n\n\n\nexperience\nrt\nprediction\nerror\nsquared_error\n\n\n\n\n49\n124\n128.216\n4.216\n17.774656\n\n\n69\n95\n94.316\n-0.684\n0.467856\n\n\n89\n71\n60.416\n-10.584\n112.021056\n\n\n99\n45\n43.466\n-1.534\n2.353156\n\n\n109\n18\n26.516\n8.516\n72.522256\n\n\n\n\n\n\n\nCompute the sum of squared error:\n\\(SSE=\\sum_{i=i}^{n} (d_{i} - m_{i})^2 = 205.139\\)\n\n\n  data %&gt;%\n    mutate(prediction = 211.271 + -1.695 * experience) %&gt;%\n    mutate(error = prediction - rt) %&gt;%\n    mutate(squared_error = error^2) %&gt;%\n    with(sum(squared_error))\n\n[1] 205.139"
+  },
+  {
+    "objectID": "slides/model-fitting-R.html#gradient-descent",
+    "href": "slides/model-fitting-R.html#gradient-descent",
+    "title": "Model Fitting with R (demo)",
+    "section": "Gradient descent",
+    "text": "Gradient descent\nA search problem: we have a parameter space, a cost function, and our job is to search through the space to find the point that minimizes the cost function."
+  },
+  {
+    "objectID": "slides/model-fitting-R.html#gradient-descent-1",
+    "href": "slides/model-fitting-R.html#gradient-descent-1",
+    "title": "Model Fitting with R (demo)",
+    "section": "Gradient descent",
+    "text": "Gradient descent\nDefine our cost function:\n\nSSE &lt;- function(data, par) {\n  data %&gt;%\n    mutate(prediction = par[1] + par[2]* experience) %&gt;%\n    mutate(error = prediction - rt) %&gt;%\n    mutate(squared_error = error^2) %&gt;%\n    with(sum(squared_error))\n}\n\nSSE(data = data, par = c(0, 0))\n\n[1] 31791\n\n\n\nImpliment gradient descent algorithm with optimg\n\noptimg(\n    data = data,  # our data\n    par = c(0,0), # our parameters\n    fn = SSE,     # our cost function\n    method = \"STGD\") # our iterative optimization algorithm \n\n$par\n[1] 211.26155  -1.69473\n\n$value\n[1] 205.138\n\n$counts\n[1] 12\n\n$convergence\n[1] 0"
+  },
+  {
+    "objectID": "slides/model-fitting-R.html#ordinary-least-squares-solution",
+    "href": "slides/model-fitting-R.html#ordinary-least-squares-solution",
+    "title": "Model Fitting with R (demo)",
+    "section": "Ordinary least squares solution",
+    "text": "Ordinary least squares solution\n\\(y = w_0 + w_1x_1\\)\n\nWe have a system of equations:\n\n\\(124 = w_01 + w_149\\)\n\\(95 = w_01 + w_169\\)\n…\n\\(18 = w_01 + w_1109\\)\n\n\n\nWe can express them as a matrix: \\(Y = Xw + \\epsilon\\)\n\n\nAnd solve with linear algebra: \\(w = (X^TX)^{-1}X^TY\\)"
+  },
+  {
+    "objectID": "slides/model-fitting-R.html#ordinary-least-squares-solution-in-r",
+    "href": "slides/model-fitting-R.html#ordinary-least-squares-solution-in-r",
+    "title": "Model Fitting with R (demo)",
+    "section": "Ordinary least squares solution in R",
+    "text": "Ordinary least squares solution in R\n\n ols_matrix_way &lt;- function(X, Y){\n  solve(t(X) %*% X) %*% t(X) %*% Y\n }\n\n\nWe need to construct X and Y (must be matrices):\n(response_matrix &lt;- data %&gt;% select(rt) %&gt;% as.matrix())\n(explanatory_matrix &lt;- data %&gt;% mutate(int = 1) %&gt;% select(int, experience) %&gt;% as.matrix())\n\n\n\n      rt\n[1,] 124\n[2,]  95\n[3,]  71\n[4,]  45\n[5,]  18\n\n\n     int experience\n[1,]   1         49\n[2,]   1         69\n[3,]   1         89\n[4,]   1         99\n[5,]   1        109\n\n\n\n\n\nThen we can use our function to generate the OLS solution:\n\nols_matrix_way(explanatory_matrix, response_matrix)\n\n                   rt\nint        211.270690\nexperience  -1.694828\n\n\n\nlm(rt ~ experience, data = data)\n\n\nCall:\nlm(formula = rt ~ experience, data = data)\n\nCoefficients:\n(Intercept)   experience  \n    211.271       -1.695  \n\n\n\n\n\n\nhttps://kathrynschuler.com/datasci"
   }
 ]
